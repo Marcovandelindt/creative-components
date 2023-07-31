@@ -1,0 +1,145 @@
+.section-services-cards {
+    .services-cards {
+        .services-cards-intro {
+            max-width: 650px;
+            margin-bottom: 100px;
+
+            .subtitle {
+                font-size: 18px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .title {
+                font-size: 35px;
+                font-weight: bold;
+            }
+        }
+
+        .services-cards-wrapper {
+            padding: 40px;
+            position: relative;
+            border-radius: 5px;
+            background-color: #f6fcff;
+            border: 1px solid rgba(29, 53, 87, .12);
+
+            @include media-breakpoint-down(lg) {
+                padding: 20px;
+            }
+
+            .services-cards-holder {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -20px;
+
+                @include media-breakpoint-down(lg) {
+                    margin: 0;
+                }
+
+                > * {
+                    margin: 0 20px;
+                    width: calc(33.3333% - 40px);
+                    flex: 1 0 calc(33.3333% - 40px);
+                    max-width: calc(333.3333% - 40px);
+
+                    @include media-breakpoint-down(lg) {
+                        margin: 0;
+                        width: 100%;
+                        flex: 1 0 100%;
+                        max-width: 100%;
+                        padding-bottom: 50px;
+
+                        &:not(:last-child) {
+                            border-bottom: 2px solid rgba(29, 53, 87, .12);
+                        }
+
+                        &:not(:first-child) {
+                            padding-top: 20px;
+                        }
+                    }
+
+                    .services-card-number {
+                        top: -110px;
+                        position: absolute;
+
+                        @include media-breakpoint-down(lg) {
+                            top: 0;
+                            position: relative;
+                        }
+
+                        span {
+                            color: #457b9d;
+                            font-size: 8rem;
+                            font-weight: 800;
+                            position: relative;
+                            font-family: "Montserrat", sans-serif;
+
+                            @include media-breakpoint-down(lg) {
+                                font-size: 4rem;
+                            }
+
+                            &:before {
+                                left: 0;
+                                z-index: 1;
+                                content: "";
+                                width: 50px;
+                                bottom: 15px;
+                                height: 50px;
+                                position: absolute;
+                                background-color: #f6fcff;
+                                border-top: 1px solid rgba(29, 53, 87, .12);
+
+                                @include media-breakpoint-down(lg) {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    
+                    .services-card-content {
+                        padding-top: 25px;
+                        position: relative;
+
+                        @include media-breakpoint-down(lg) {
+                            padding-top: 0;
+                        }
+
+                        h3, p {
+                            font-family: "Montserrat", sans-serif;
+                        }
+
+                        h3 {
+                            font-size: 25px;
+                            font-weight: 600;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+
+                        .button-holder {
+                            margin-top: 30px;
+
+                            .button {
+                                color: #fff;
+                                font-size: 14px;
+                                font-weight: 400;
+                                padding: 10px 15px;
+                                border-radius: 7px;
+                                text-decoration: none;
+                                background-color: #457b9d;
+                                transition: all .3s ease-in-out;
+
+                                &:hover {
+                                    background-color: #3e6f8d;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
